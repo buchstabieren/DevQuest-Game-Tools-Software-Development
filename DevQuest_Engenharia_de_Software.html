@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>DevQuest — Academia do Código</title>
+    <link rel="stylesheet" href="devQuest.css" />
+    <script src="devQuest.js" defer></script>
+
+  </head>
+  <body>
+    <main class="wrap">
+      <header class="top">
+        <div class="logo">
+          ✦ Dev<span>Quest</span>
+          <small class="tiny">/ academia do código</small>
+        </div>
+        <div class="toolbar">
+          <span class="pill">⭐ <b id="xp">0</b> XP</span
+          ><span class="pill">🏅 Nível <b id="level">1</b></span
+          ><span class="pill">🔥 <b id="streak">0</b> sequência</span>
+        </div>
+      </header>
+      <section class="hero">
+        <div class="eyebrow">Sua faculdade virou uma aventura</div>
+        <h1>
+          Seis mundos.<br />Uma missão:
+          <span style="color: var(--pink)">dominar o código.</span>
+        </h1>
+        <p>
+          Revise as seis aulas de Fundamentos de Desenvolvimento de Softwares
+          com missões, desafios práticos, explicações, chefão final e cartas de
+          memória. Seus pontos ficam salvos neste navegador.
+        </p>
+      </section>
+      <section class="stats">
+        <div class="stat">
+          <small>Questões respondidas</small><strong id="total">0</strong>
+        </div>
+        <div class="stat">
+          <small>Taxa de acertos</small><strong id="rate">0%</strong>
+        </div>
+        <div class="stat">
+          <small>Mundos concluídos</small><strong id="done">0/6</strong>
+        </div>
+        <div class="stat">
+          <small>Melhor chefão</small><strong id="best">—</strong>
+        </div>
+      </section>
+      <div class="toolbar">
+        <button class="btn secondary" id="review">↻ Revisar meus erros</button
+        ><button class="btn secondary" id="flashBtn">
+          🃏 Cartas de memória</button
+        ><button class="btn" id="boss">⚔ Chefão final</button
+        ><button class="btn secondary" id="reset">Zerar progresso</button>
+      </div>
+      <h2>🗺 Escolha seu mundo</h2>
+      <section class="worlds" id="worlds"></section>
+      <section id="game" class="game" aria-live="polite">
+        <div class="gameHead">
+          <span id="mode"></span><span id="counter"></span
+          ><span id="hearts"></span>
+        </div>
+        <div class="progress" style="margin-top: 14px"><i id="bar"></i></div>
+        <div id="play">
+          <div class="eyebrow" id="kind"></div>
+          <div class="question" id="question"></div>
+          <div class="answers" id="answers"></div>
+          <div class="feedback" id="feedback"></div>
+          <div class="actions">
+            <button class="btn hidden" id="next">Próximo desafio →</button
+            ><button class="btn secondary" id="quit">← Voltar ao mapa</button>
+          </div>
+        </div>
+        <div id="finish" class="end hidden"></div>
+        <div id="flashArea" class="hidden"></div>
+      </section>
+      <footer>
+        Conteúdo de estudo adaptado das aulas 1 a 6 anexadas. O jogo é offline,
+        não precisa instalar nada nem criar conta. As respostas são avaliadas
+        localmente. 💜
+      </footer>
+    </main>
+  </body>
+</html>
