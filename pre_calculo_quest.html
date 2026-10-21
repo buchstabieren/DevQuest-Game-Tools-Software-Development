@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Arcana · Pré-Cálculo</title>
+
+    <link rel="stylesheet" href="pre_calculo.css" />
+    <script src="pre_calculo.js" defer></script>
+    
+  </head>
+  <body>
+    <main>
+      <header>
+        <div>
+          <span class="tag">✦ A ACADEMIA ARCANA ✦</span>
+          <h1>Pré-Cálculo Quest</h1>
+          <div class="muted">
+            Seis reinos. Trinta desafios. Uma jornada para dominar a matemática.
+          </div>
+        </div>
+        <button class="secondary" id="reset">↻ Reiniciar progresso</button>
+      </header>
+      <div class="stats">
+        <div class="stat">
+          <small>✨ XP total</small><strong id="xp">0</strong>
+        </div>
+        <div class="stat">
+          <small>🏆 Reinos vencidos</small><strong id="won">0/6</strong>
+        </div>
+        <div class="stat">
+          <small>🔥 Melhor sequência</small><strong id="streak">0</strong>
+        </div>
+        <div class="stat">
+          <small>🎯 Acertos totais</small><strong id="accuracy">0/0</strong>
+        </div>
+      </div>
+      <section id="home">
+        <div class="panel">
+          <h2>🗺️ Escolha seu próximo reino</h2>
+          <p class="muted">
+            Responda, ganhe XP, desbloqueie fases e aprenda com resoluções
+            comentadas. São 5 questões por reino; para conquistar a medalha,
+            acerte pelo menos 4. Errou? Você pode tentar novamente.
+          </p>
+          <label
+            ><input type="checkbox" id="hard" /> ⚡ Modo desafio: 45 segundos
+            por pergunta (bônus de 5 XP por acerto no prazo)</label
+          >
+        </div>
+        <div class="map" id="map"></div>
+        <div class="panel">
+          <h2>📜 Como jogar</h2>
+          <p>
+            Resposta correta: +20 XP. Resposta incorreta: a explicação aparece e
+            você aprende o método. Uma sequência de 3 acertos dá +10 XP extras.
+            As fases seguem as seis aulas dos PDFs. Seu progresso fica salvo
+            neste navegador.
+          </p>
+        </div>
+      </section>
+      <section id="game" class="hidden">
+        <div class="panel">
+          <div class="top">
+            <span class="tag" id="realm"></span
+            ><span id="counter" class="muted"></span
+            ><span class="hint" id="timer"></span>
+          </div>
+          <div class="bar"><div class="fill" id="fill"></div></div>
+          <div class="muted" id="score"></div>
+          <h2 class="question" id="question"></h2>
+          <div class="answers" id="answers"></div>
+          <div id="feedback" class="feedback hidden" aria-live="polite"></div>
+          <div class="actions" style="margin-top: 20px">
+            <button class="secondary" id="back">← Mapa</button
+            ><button class="primary hidden" id="next">Próximo desafio →</button>
+          </div>
+        </div>
+      </section>
+      <section id="end" class="hidden">
+        <div class="panel" style="text-align: center">
+          <div style="font-size: 60px" id="medal"></div>
+          <h2 id="endtitle"></h2>
+          <p id="endtext" class="muted"></p>
+          <div class="actions" style="justify-content: center">
+            <button class="secondary" id="retry">↻ Repetir reino</button
+            ><button class="primary" id="return">Voltar ao mapa →</button>
+          </div>
+        </div>
+      </section>
+      <div class="footer">
+        Conteúdo adaptado das aulas 1–6 de Pré-Cálculo (Prof. Guilherme
+        Lemermeier Rodrigues). Funciona offline; nenhum cadastro necessário.
+      </div>
+    </main>
+  </body>
+</html>
